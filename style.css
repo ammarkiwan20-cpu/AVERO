@@ -1,0 +1,457 @@
+/* --- إعدادات عامة وألوان البراند --- */
+:root {
+    --bg-color: #F7F4F0;       /* بيج فاتح هادئ للخلفية */
+    --primary-brown: #3D2C22;  /* بني داكن وفخم لعناصر الأساس */
+    --accent-brown: #8C6D53;   /* بني متوسط للتفاصيل والأزرار الثانوية */
+    --text-color: #2B2118;     /* لون النصوص الأساسي */
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 1. الشريط العلوي (Navbar) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(61, 44, 34, 0.1);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--primary-brown);
+    cursor: pointer;
+    display: none; /* تظهر في الشاشات الصغيرة */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: var(--primary-brown);
+    transition: var(--transition);
+    font-size: 15px;
+}
+
+.nav-links a:hover, .sale-link:hover {
+    color: var(--accent-brown);
+}
+
+.sale-link {
+    color: #A34848 !important; /* لون مميز للتخفيضات */
+}
+
+/* لوجو AVERO */
+.logo a {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--primary-brown);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(61, 44, 34, 0.2);
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    padding-right: 8px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.search-box i {
+    color: var(--accent-brown);
+}
+
+.icon-link {
+    font-size: 18px;
+    color: var(--primary-brown);
+    position: relative;
+    transition: var(--transition);
+}
+
+.icon-link:hover {
+    color: var(--accent-brown);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-brown);
+    color: var(--white);
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- 2. البانر الرئيسي (Hero Section) --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content .tag {
+    background-color: var(--primary-brown);
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-outline {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-brown);
+    color: var(--white);
+    border: 2px solid var(--primary-brown);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-brown);
+}
+
+/* --- 3. قسم التصنيفات السريعة --- */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px 40px;
+}
+
+.category-card {
+    position: relative;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-title {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--bg-color);
+    color: var(--primary-brown);
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- 4. قسم المنتجات --- */
+.products-section {
+    padding: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    color: var(--primary-brown);
+    font-weight: 700;
+}
+
+.view-all {
+    color: var(--accent-brown);
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid var(--accent-brown);
+    padding-bottom: 2px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(61, 44, 34, 0.05);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(61, 44, 34, 0.1);
+}
+
+.product-img {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quick-add {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-brown);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 80%;
+}
+
+.product-card:hover .quick-add {
+    bottom: 15px;
+}
+
+.product-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--accent-brown);
+    font-size: 15px;
+}
+
+/* --- 5. الفوتر --- */
+.footer {
+    background-color: var(--primary-brown);
+    color: var(--white);
+    padding: 50px 40px 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-newsletter h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+    font-size: 14px;
+    color: #D3C5B4;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto 40px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    background-color: var(--accent-brown);
+    color: var(--white);
+    border: none;
+    padding: 0 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background-color: #A38266;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 13px;
+    color: #D3C5B4;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.socials a {
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.socials a:hover {
+    color: var(--accent-brown);
+}
+
+/* --- التجاوب مع الهواتف المحمولة --- */
+@media (max-width: 992px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-links {
+        display: none; /* يمكن تفعيلها بملف الجافاسكربت لاحقاً */
+    }
+    .menu-btn {
+        display: block;
+    }
+    .navbar {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+      }
+  
