@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسم براندك | متجر الأزياء العصري</title>
+    <!-- ربط ملف التنسيق اللي هنعمله الخطوة الجاية -->
+    <link rel="stylesheet" href="style.css">
+    <!-- خط عصري من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- مكتبة أيقونات بسيطة (مثل البحث والسلة) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. الشريط العلوي (Navbar) -->
+    <header class="navbar">
+        <div class="nav-right">
+            <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav-links">
+                <a href="#new">جديد</a>
+                <a href="#men">رجال</a>
+                <a href="#women">نساء</a>
+                <a href="#sale" class="sale-link">تخفيضات</a>
+            </nav>
+        </div>
+
+        <!-- اللوجو في المنتصف زي Pull&Bear -->
+        <div class="logo">
+            <a href="#">BRAND NAME</a>
+        </div>
+
+        <div class="nav-left">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="بحث...">
+            </div>
+            <a href="#account" class="icon-link"><i class="far fa-user"></i></a>
+            <a href="#cart" class="icon-link cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. البانر الرئيسي الكبير (Hero Section) -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">تشكيلة الشتاء / الخريف</span>
+            <h1>STREETWEAR COLLECTION</h1>
+            <p>تصاميم عصرية تناسب أسلوبك اليومي</p>
+            <div class="hero-buttons">
+                <a href="#men" class="btn-primary">تسوق للرجال</a>
+                <a href="#women" class="btn-outline">تسوق للنساء</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم التصنيفات السريعة (Categories) -->
+    <section class="categories">
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=800&q=80" alt="هوديز">
+            <div class="category-title">هوديز وسويت شيرت</div>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80" alt="جينز">
+            <div class="category-title">بنطلونات جينز</div>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=800&q=80" alt="جاكيت">
+            <div class="category-title">جواكت ومعاطف</div>
+        </div>
+    </section>
+
+    <!-- 4. قسم وصل حديثاً (Product Grid) -->
+    <section class="products-section" id="new">
+        <div class="section-header">
+            <h2>وصل حديثاً</h2>
+            <a href="#" class="view-all">عرض الكل</a>
+        </div>
+
+        <div class="products-grid">
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="هودي أسود">
+                    <button class="quick-add">+ إضافة سريعة</button>
+                </div>
+                <div class="product-info">
+                    <h3>هودي أوفر سايز قطن</h3>
+                    <span class="price">850 EGP</span>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80" alt="تيشيرت مطبوع">
+                    <button class="quick-add">+ إضافة سريعة</button>
+                </div>
+                <div class="product-info">
+                    <h3>تيشيرت جرافيك أبيض</h3>
+                    <span class="price">450 EGP</span>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="بنطلون كارجو">
+                    <button class="quick-add">+ إضافة سريعة</button>
+                </div>
+                <div class="product-info">
+                    <h3>بنطلون كارجو واسع</h3>
+                    <span class="price">950 EGP</span>
+                </div>
+            </div>
+
+            <!-- منتج 4 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="جاكيت جلد">
+                    <button class="quick-add">+ إضافة سريعة</button>
+                </div>
+                <div class="product-info">
+                    <h3>جاكيت جلد أسود كلاسيك</h3>
+                    <span class="price">1,600 EGP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. الفوتر (Footer) -->
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <h3>اشترك في نشرتنا البريدية</h3>
+            <p>احصل على خصم 10% على أول طلب وأحدث العروض</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="أدخل بريدك الإلكتروني">
+                <button type="submit">اشتراك</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BRAND NAME. جميع الحقوق محفوظة.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ربط ملف الجافا سكربت -->
+    <script src="script.js"></script>
+</body>
+</html>
